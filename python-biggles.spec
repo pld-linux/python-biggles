@@ -1,11 +1,19 @@
+
+#
+# todo:
+# - put config.ini into sysconfdir
+# - remove *.py
+#
+
 %include        /usr/lib/rpm/macros.python
+
 Summary:	High-level scientific plotting module for Python
 Summary(pl):	Wysokopoziomowy modu³ do wykresów naukowych dla Pythona
 Name:		python-biggles
 Version:	1.6.3
 Release:	0.1
 License:	GPL
-Group:		Applications/Graphics
+Group:		Libraries/Python
 Source0:	http://dl.sourceforge.net/biggles/%{name}-%{version}.tar.gz
 # Source0-md5:	316717ce5f54311d47853e6b2948a329
 URL:		http://biggles.sourceforge.net/
@@ -56,7 +64,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc CREDITS ChangeLog README examples
 %dir %{bigglesdir}
-# XXX: if it's %config, it shouldn't be here
 %config %{bigglesdir}/config.ini
 %{bigglesdir}/*.py
 %{bigglesdir}/*.pyc
