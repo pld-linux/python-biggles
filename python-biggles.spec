@@ -1,20 +1,20 @@
 
 #
 # todo:
-# - put config.ini into sysconfdir
 # - remove *.py
 #
 
-
+%define		filename	python2-biggles
 Summary:	High-level scientific plotting module for Python
 Summary(pl):	Wysokopoziomowy modu³ do wykresów naukowych dla Pythona
 Name:		python-biggles
-Version:	1.6.3
-Release:	0.1
+Version:	1.6.4
+Release:	1
 License:	GPL
 Group:		Libraries/Python
-Source0:	http://dl.sourceforge.net/biggles/%{name}-%{version}.tar.gz
-# Source0-md5:	316717ce5f54311d47853e6b2948a329
+Source0:	http://dl.sourceforge.net/biggles/%{filename}-%{version}.tar.gz
+# Source0-md5:	e07bc9e22d830ada274ea71bc6d12556
+Patch0:		%{name}-configdir.patch
 URL:		http://biggles.sourceforge.net/
 BuildRequires:	libplot-devel
 BuildRequires:	python-devel
@@ -42,7 +42,8 @@ wysokopoziomowy, elegancki interfejs. Jest przeznaczony dla
 u¿ytkowników technicznych z wyszukanymi wymaganiami co do wykresów.
 
 %prep
-%setup -q
+%setup -q -n %{filename}-%{version}
+%patch0 -p0
 
 %build
 %{__make} \
@@ -54,9 +55,9 @@ u¿ytkowników technicznych z wyszukanymi wymaganiami co do wykresów.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{bigglesdir}/libplot
 
-install src/config.ini $RPM_BUILD_ROOT%{bigglesdir}/config.ini
-install src/*.{py{,c},so}  $RPM_BUILD_ROOT%{bigglesdir}
-install src/libplot/*.{py{,c},so}  $RPM_BUILD_ROOT%{bigglesdir}/libplot
+install -D src/config.ini $RPM_BUILD_ROOT%{_sysconfdir}/%{name}/config.ini
+install src/*.{py{,c},so} $RPM_BUILD_ROOT%{bigglesdir}
+install src/libplot/*.{py{,c},so} $RPM_BUILD_ROOT%{bigglesdir}/libplot
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -65,7 +66,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc CREDITS ChangeLog README examples
 %dir %{bigglesdir}
-%config %{bigglesdir}/config.ini
+%dir %{_sysconfdir}/%{name}
+%config %{_sysconfdir}/%{name}/config.ini
 %{bigglesdir}/*.py
 %{bigglesdir}/*.pyc
 %attr(755,root,root) %{bigglesdir}/*.so
