@@ -1,0 +1,12 @@
+--- src/config.py~	2003-04-17 02:51:02.000000000 +0200
++++ src/config.py	2004-08-19 21:31:10.000000000 +0200
+@@ -41,7 +41,8 @@
+ _config.deprecated( ('printer','paper'), ('postscript','paper') )
+ 
+ #SITECONFIGFILE = os.path.join( imp.find_module("biggles")[1], "config.ini" )
+-SITECONFIGFILE = os.path.join( os.path.dirname(__file__), "config.ini" )
++#SITECONFIGFILE = os.path.join( os.path.dirname(__file__), "config.ini" )
++SITECONFIGFILE = "/etc/python-biggles/config.ini"
+ _config.read( SITECONFIGFILE )
+ 
+ if os.environ.has_key( "HOME" ):
