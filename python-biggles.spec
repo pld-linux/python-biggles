@@ -46,7 +46,8 @@ u¿ytkowników technicznych z wyszukanymi wymaganiami co do wykresów.
 %build
 %{__make} \
 	CC="%{__cc}" \
-	CFLAGS="%{rpmcflags} -fPIC -ansi -Wall"
+	CFLAGS="%{rpmcflags} -fPIC -ansi -Wall" \
+	LDFLAGS="-L%{_lib}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
