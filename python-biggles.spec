@@ -19,7 +19,6 @@ URL:		http://biggles.sourceforge.net/
 BuildRequires:	libplot-devel
 BuildRequires:	python-devel
 BuildRequires:	python-numpy-devel
-BuildRequires:	rpm-pythonprov
 Requires:	plotutils
 Requires:	python >= 1.5.2
 Requires:	python-numpy
