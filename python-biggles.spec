@@ -5,7 +5,6 @@
 # - remove *.py
 #
 
-%include        /usr/lib/rpm/macros.python
 
 Summary:	High-level scientific plotting module for Python
 Summary(pl):	Wysokopoziomowy modu³ do wykresów naukowych dla Pythona
