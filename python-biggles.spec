@@ -17,6 +17,7 @@ Source0:	http://dl.sourceforge.net/biggles/%{name}-%{version}.tar.gz
 # Source0-md5:	316717ce5f54311d47853e6b2948a329
 URL:		http://biggles.sourceforge.net/
 BuildRequires:	libplot-devel
+BuildRequires:	python-devel
 BuildRequires:	python-numpy-devel
 BuildRequires:	rpm-pythonprov
 Requires:	plotutils
