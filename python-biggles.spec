@@ -9,7 +9,7 @@ Summary:	High-level scientific plotting module for Python
 Summary(pl):	Wysokopoziomowy modu³ do wykresów naukowych dla Pythona
 Name:		python-biggles
 Version:	1.6.4
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries/Python
 Source0:	http://dl.sourceforge.net/biggles/%{filename}-%{version}.tar.gz
@@ -23,6 +23,7 @@ BuildRequires:	rpm-pythonprov
 Requires:	plotutils
 Requires:	python >= 1.5.2
 Requires:	python-numpy
+%pyrequires_eq	python-libs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		bigglesdir	%{py_sitedir}/biggles
