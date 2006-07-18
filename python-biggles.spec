@@ -17,11 +17,11 @@ Source0:	http://dl.sourceforge.net/biggles/%{filename}-%{version}.tar.gz
 Patch0:		%{name}-configdir.patch
 URL:		http://biggles.sourceforge.net/
 BuildRequires:	libplot-devel
+BuildRequires:	python-Numeric-devel
 BuildRequires:	python-devel
-BuildRequires:	python-numpy-devel
 Requires:	plotutils
 Requires:	python >= 1.5.2
-Requires:	python-numpy
+Requires:	python-Numeric
 %pyrequires_eq	python-libs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
