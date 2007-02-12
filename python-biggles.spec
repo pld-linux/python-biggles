@@ -6,7 +6,7 @@
 
 %define		filename	python2-biggles
 Summary:	High-level scientific plotting module for Python
-Summary(pl):	Wysokopoziomowy modu≥ do wykresÛw naukowych dla Pythona
+Summary(pl.UTF-8):   Wysokopoziomowy modu≈Ç do wykres√≥w naukowych dla Pythona
 Name:		python-biggles
 Version:	1.6.4
 Release:	2
@@ -34,12 +34,12 @@ X11, PNG, SVG, GIF), understands simple TeX, and supports a
 high-level, elegant interface. It's intended for technical users with
 sophisticated plotting needs.
 
-%description -l pl
-Biggles to modu≥ Pythona do tworzenia wykresÛw naukowych 2D z jako∂ci±
-wystarczaj±c± dla publikacji. Obs≥uguje wiele formatÛw wyj∂ciowych
-(PostScript, X11, PNG, SVG, GIF), rozumie prostego TeXa i obs≥uguje
+%description -l pl.UTF-8
+Biggles to modu≈Ç Pythona do tworzenia wykres√≥w naukowych 2D z jako≈õciƒÖ
+wystarczajƒÖcƒÖ dla publikacji. Obs≈Çuguje wiele format√≥w wyj≈õciowych
+(PostScript, X11, PNG, SVG, GIF), rozumie prostego TeXa i obs≈Çuguje
 wysokopoziomowy, elegancki interfejs. Jest przeznaczony dla
-uøytkownikÛw technicznych z wyszukanymi wymaganiami co do wykresÛw.
+u≈ºytkownik√≥w technicznych z wyszukanymi wymaganiami co do wykres√≥w.
 
 %prep
 %setup -q -n %{filename}-%{version}
