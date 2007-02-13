@@ -6,7 +6,7 @@
 
 %define		filename	python2-biggles
 Summary:	High-level scientific plotting module for Python
-Summary(pl.UTF-8):   Wysokopoziomowy moduł do wykresów naukowych dla Pythona
+Summary(pl.UTF-8):	Wysokopoziomowy moduł do wykresów naukowych dla Pythona
 Name:		python-biggles
 Version:	1.6.4
 Release:	2
