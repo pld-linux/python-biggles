@@ -43,7 +43,7 @@ użytkowników technicznych z wyszukanymi wymaganiami co do wykresów.
 
 %prep
 %setup -q -n %{filename}-%{version}
-%patch0 -p0
+%patch -P0 -p0
 
 %build
 %{__make} \
